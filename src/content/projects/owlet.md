@@ -2,7 +2,7 @@
 title: "Owlet"
 category: "Shipped Game"
 summary: "Team RTS/tower-defense game with a custom C++ engine, shipped on itch.io with full Steam Deck support."
-thumbnail: "/projects/owlet.jpg"
+thumbnail: "/projects/owlet/owlet.png"
 team: "Team of ~10"
 featured: true
 order: 1
@@ -11,7 +11,7 @@ links:
   video: ""
 ---
 
-Owlet is an RTS/tower-defense game built by a team of around 10, running on a fully custom C++ engine written from scratch by the team — no Unreal or Unity underneath. My role covered gameplay/UI systems within the engine, and I was the sole person responsible for Steam integration and Steam Deck support.
+Owlet is an RTS/tower-defense game built by a team of 14, running on a fully custom C++ engine written from scratch by the team based on a bare bone engine template that covered basic resource management and rendering (the rendering was redone for DX12 by one of our programmers). My role covered gameplay/UI systems within the engine, and I was the sole person responsible for Steam integration and Steam Deck support along with small help regarding data structures for entities and some serialization for the towers class.
 
 ## What I did
 
@@ -34,4 +34,11 @@ On the gameplay side, most of my UI/readability work (the leaderboard, wave coun
 
 ## Release
 
-Owlet shipped on itch.io as an early-access release with full Steam Deck compatibility, a gameplay trailer, and multiple post-launch updates based on feedback from both RTS veterans and newcomers.
+Owlet shipped on itch.io as an early-access release with full Steam Deck compatibility (due to being a school project the steam app id was probably reused for another project), a gameplay trailer, and multiple post-launch updates based on feedback from both RTS veterans and newcomers.
+
+[View on itch.io →](https://buas.itch.io/owlet)
+
+<video controls width="500">
+  <source src="/projects/owlet/owlet.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>

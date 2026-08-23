@@ -2,7 +2,7 @@
 title: "Pizzapocalypse 2"
 category: "Technical Lead"
 summary: "Technical Lead at Monkey Strike Games — CI/CD infra, rendering optimization, baked lighting, and Steam platform integration for a UE5.6 production."
-thumbnail: "/projects/pizzapocalypse.jpg"
+thumbnail: "/projects/pizzapocalypse2/Pizzapocalypse2.jpg"
 team: "Studio production (Monkey Strike Games)"
 featured: true
 order: 2
@@ -10,15 +10,15 @@ links:
   video: ""
 ---
 
-Pizzapocalypse 2 is a UE5.6 production at Monkey Strike Games, where I work as Technical Lead. My work spans the full pipeline: the studio's infrastructure (Perforce, Jenkins, VPN), rendering optimization and baked lighting for open, densely set-dressed levels, and Steam platform integration built largely from scratch since Unreal's official plugins didn't cover what we needed.
+Pizzapocalypse 2 is a UE5.6 production at Monkey Strike Games, where I work as Technical Lead. My work spans the full pipeline: the studio's infrastructure (Perforce, Jenkins, VPN) along with setting their office servers, rendering optimization and baked lighting for open, densely set-dressed levels, Steam platform integration built largely from scratch due to custom logic being needed for enhanced input system and drm and packaging/build/compile bugs and errors fixing.
 
 ## What I did
 
 **Infrastructure**
-- Set up and administer the studio's **Perforce Helix Core server** (user/workspace management, recovery from lockouts, ticket policy)
-- Set up and maintain the **Jenkins CI/CD pipeline**: multiple build agents/nodes, node labeling and priority, a dedicated lighting-bake pipeline, Google Drive and Steam deployment stages, plugin/credential maintenance
+- Set up and administer the studio's **Perforce Helix Core server** (user/workspace management, recovery from lockouts, ticket policy, connection to jenkins and one workspace being shared for 2 devices due to workspace number constrains)
+- Set up and maintain the **Jenkins CI/CD pipeline**: multiple build agents/nodes, node labeling and priorit, Google Drive and Steam deployment stages, plugin/credential maintenance
 - Set up the studio's **NetBird VPN overlay** for remote access to Perforce/Jenkins, including onboarding docs for the rest of the team
-- Built a **Jenkins-triggered automated profiling pipeline** with input record/replay, pushing results to a shared drive
+- Built a **Jenkins-triggered automated profiling pipeline** with input record/replay, pushing results to a shared drive (depricated currently)
 
 **Rendering & optimization**
 - Built a suite of **shadow-culling tools** for forward shading (distance-based dynamic shadow culling, impostor shadow-casters, volume-based dynamic shadow culling) since forward shading has no default shadow distance culling
@@ -31,10 +31,10 @@ Pizzapocalypse 2 is a UE5.6 production at Monkey Strike Games, where I work as T
 - Owned **baked lighting** for large levels (e.g. a ~9-10 hour bake for one level), including visibility volume builds and production-quality settings for release builds
 
 **Steam & platform integration**
-- Built a **custom Steam Input plugin** from scratch (the official Unreal plugin was outdated), including the manifest-generation system, per-controller mapping support, and CommonUI integration for correct per-controller button icons (PlayStation, Xbox, Switch, Steam Deck)
+- Built a **custom Steam Input plugin** from scratch (the official Unreal plugin was outdated and didn't cover enhanced input system along with having a limited pipeline that required more user input, my goal was to make it as simple to use as possible), including the manifest-generation system, per-controller mapping support, and CommonUI integration for correct per-controller button icons (PlayStation, Xbox, Switch, Steam Deck) (CommonUI integration is still under development in order to make it more easy to use and change)
 - Built **Steam Stats** support (int/float stat tracking) and a **cross-platform rich presence system** (Steam + Discord, with an expandable per-SDK provider architecture)
 - Implemented **PSO precaching and a custom PSO bundling pipeline** to reduce shader-compilation stutter
-- Converted video/movie playback from MP4 to WebM for cross-platform compatibility (Steam Deck, console-style platforms)
+- Converted video/movie playback from MP4 to WebM for cross-platform compatibility (Steam Deck, console-style platforms, added scripts for easy conversion to make it easy for other to use along with documentation regarding it)
 
 **Tools & systems**
 - Built the team's **save system** (persistent settings/collectibles via an interface-based callback contract, plus a simpler checkpoint/respawn system for temporary state)
@@ -51,3 +51,10 @@ The Steam Input plugin is the clearest example of building something from nothin
 
 ## Result
 A studio-wide pipeline (Perforce + Jenkins + automated profiling) that lets the team ship builds without manual intervention, plus a rendering/optimization approach and toolset that made large, densely set-dressed levels runnable on the intended target hardware.
+
+[View on Steam →](https://store.steampowered.com/app/4021890/Pizzapocalypse_2/)
+
+<video controls width="500">
+  <source src="/projects/pizzapocalypse2/Pizzapocalypse2.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>

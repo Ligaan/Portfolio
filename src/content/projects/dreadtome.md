@@ -2,7 +2,7 @@
 title: "Dreadtome"
 category: "Shipped Game"
 summary: "Unreal Engine 5 team production — save system, enemy AI, and an automated profiling pipeline."
-thumbnail: "/projects/dreadtome.jpg"
+thumbnail: "/projects/dreadtome/dreadtome.jpg"
 team: "Team of ~10 (Team Seven)"
 featured: true
 order: 4
@@ -33,3 +33,10 @@ On the enemy AI side, the crawler enemy went through several iterations — firs
 ## Release
 
 Dreadtome shipped as the team's full production for the block. The save system remained one of the game's core systems throughout — the game leans into a harder difficulty where dying is expected, so save/checkpoint reliability directly affected the intended player experience. The profiling pipeline stayed in active use by the team through the rest of production.
+
+[View on Steam →](https://store.steampowered.com/app/3365910/DREADTOME/)
+
+<video controls width="500">
+  <source src="/projects/dreadtome/trailer.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
