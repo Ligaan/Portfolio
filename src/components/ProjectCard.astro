@@ -1,0 +1,62 @@
+---
+interface Props {
+  slug: string;
+  title: string;
+  category: string;
+  summary: string;
+  thumbnail: string;
+}
+const { slug, title, category, summary, thumbnail } = Astro.props;
+---
+<a href={`/projects/${slug}`} class="card">
+  <img src={thumbnail} alt={title} />
+  <div class="card-body">
+    <span class="tag">{category}</span>
+    <h3>{title}</h3>
+    <p>{summary}</p>
+  </div>
+</a>
+
+<style>
+  .card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #2a2d33;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #1a1c21;
+    transition: transform 0.15s, border-color 0.15s;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    border-color: #2ecc71;
+  }
+  .card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+  }
+  .card-body {
+    padding: 1rem;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #2ecc71;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.4rem;
+  }
+  .card-body h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.1rem;
+  }
+  .card-body p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+</style>

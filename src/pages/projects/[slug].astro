@@ -1,0 +1,56 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+---
+<Layout title={project.data.title}>
+  <p><a href="/projects">← Back to Projects</a></p>
+  <span class="tag">{project.data.category}</span>
+  <h1>{project.data.title}</h1>
+
+  <img src={project.data.thumbnail} alt={project.data.title} class="hero-img" />
+
+  <div class="links">
+    {project.data.links?.github && <a href={project.data.links.github} target="_blank">GitHub</a>}
+    {project.data.links?.itch && <a href={project.data.links.itch} target="_blank">itch.io</a>}
+    {project.data.links?.video && <a href={project.data.links.video} target="_blank">Video</a>}
+  </div>
+
+  <article>
+    <Content />
+  </article>
+</Layout>
+
+<style>
+  .tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #2ecc71;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .hero-img {
+    width: 100%;
+    border-radius: 6px;
+    margin: 1rem 0;
+  }
+  .links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .links a {
+    color: #7dd3fc;
+  }
+</style>

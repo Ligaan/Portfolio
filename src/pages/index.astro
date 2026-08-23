@@ -1,17 +1,42 @@
 ---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 
+const projects = await getCollection('projects');
+const featured = projects
+  .filter((p) => p.data.featured)
+  .sort((a, b) => a.data.order - b.data.order);
 ---
+<Layout title="Home">
+  <h1>Andrei Cuprinsu</h1>
+  <p>
+    Gameplay & engine programmer who moves comfortably between low-level
+    engine systems, gameplay mechanics, and the build/tooling infrastructure
+    that keeps a team shipping.
+  </p>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+  <h2>Highlights</h2>
+  <div class="grid">
+    {featured.map((project) => (
+      <ProjectCard
+        slug={project.id}
+        title={project.data.title}
+        category={project.data.category}
+        summary={project.data.summary}
+        thumbnail={project.data.thumbnail}
+      />
+    ))}
+  </div>
+
+  <p><a href="/projects">See all projects →</a></p>
+</Layout>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+</style>

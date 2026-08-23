@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+
+const projects = await getCollection('projects');
+const sorted = projects.sort((a, b) => a.data.order - b.data.order);
+---
+<Layout title="Projects">
+  <h1>Projects</h1>
+  <div class="grid">
+    {sorted.map((project) => (
+      <ProjectCard
+        slug={project.id}
+        title={project.data.title}
+        category={project.data.category}
+        summary={project.data.summary}
+        thumbnail={project.data.thumbnail}
+      />
+    ))}
+  </div>
+</Layout>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+</style>
