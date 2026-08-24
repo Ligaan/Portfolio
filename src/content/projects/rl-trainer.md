@@ -7,7 +7,6 @@ team: "Solo project"
 featured: true
 order: 3
 links:
-  github: "https://github.com/Ligaan"
   blog: "https://ligaan.github.io/2024/01/22/Reinforcement-Learning-in-C++.html"
 ---
 
