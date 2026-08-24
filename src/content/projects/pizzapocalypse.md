@@ -18,7 +18,7 @@ Pizzapocalypse 2 is a UE5.6 production at Monkey Strike Games, where I work as T
 - Set up and administer the studio's **Perforce Helix Core server** (user/workspace management, recovery from lockouts, ticket policy, connection to jenkins and one workspace being shared for 2 devices due to workspace number constrains)
 - Set up and maintain the **Jenkins CI/CD pipeline**: multiple build agents/nodes, node labeling and priorit, Google Drive and Steam deployment stages, plugin/credential maintenance
 - Set up the studio's **NetBird VPN overlay** for remote access to Perforce/Jenkins, including onboarding docs for the rest of the team
-- Built a **Jenkins-triggered automated profiling pipeline** with input record/replay, pushing results to a shared drive (depricated currently)
+- Built a **Jenkins-triggered automated profiling pipeline** with input record/replay, pushing results to a shared drive (deprecated currently)
 
 **Rendering & optimization**
 - Built a suite of **shadow-culling tools** for forward shading (distance-based dynamic shadow culling, impostor shadow-casters, volume-based dynamic shadow culling) since forward shading has no default shadow distance culling

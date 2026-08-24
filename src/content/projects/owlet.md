@@ -19,12 +19,16 @@ Owlet is an RTS/tower-defense game built by a team of 14, running on a fully cus
 - Added **customizable, in-editor-editable keyboard shortcuts** for orders and UI
 - Built a **debug metrics system** for recording and serializing playtest data to inform design decisions
 - Shipped readability features driven directly by playtest feedback: a **leaderboard**, **wave counter**, and **enemy-hover indication**
-- Owned **Steam API integration and Steam Deck support** end-to-end — the only person on the team working on this
+- Owned **Steam API integration and Steam Deck support** end-to-end — the only person on the team working on this - steam deck support was deprecated during the final part of the game production due to the game scope being too big for the time constrain
 - Wrote **raycast functions** underlying unit orders (go-to, attack, gather)
 - Built the **selection system** (redone for screen-space in a later pass), used both in gameplay and in the level editor for deleting props/structures/units
 - Designed the **unit/structure/prop attribute and manager system** (initially over-engineered with a modifier system, simplified down to a core attributes/tags model that stayed)
 - Built an **input wrapper** unifying the engine's native input and Steam Input under the same function calls, removing platform-specific branching from gameplay code
 - Set up **platform-dependent build configuration** separation for cross-platform support
+
+
+<img src="/projects/owlet/Steam_Deck.gif" alt="Agent behavior mid/late training, after the replay buffer optimization" style="width: 100%; height: auto; display: block;" />
+Steam deck support from an earlier stage of the engine development
 
 ## Contributions
 
