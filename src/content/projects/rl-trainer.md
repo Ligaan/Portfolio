@@ -68,21 +68,19 @@ RL Racing Agent Trainer is a solo research and tooling project built to explore 
 
 Net effect on actual training: a 2,000-episode run that took **~7 hours** before the fix dropped to **~2–3 hours** after it, purely from removing overhead that had nothing to do with the RL algorithm itself.
 
-<table>
-<tr>
-<td>
-<video controls style="width: 100%; height: auto;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; align-items: start;">
+<div>
+<video controls style="width: 100%; height: auto; display: block;">
   <source src="/projects/rl_trainer/BeforeOptimization.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
-<br/><em>Early training — before the bulk-insert replay buffer fix, wobbly and slow to converge.</em>
-</td>
-<td>
-<img src="/projects/rl_trainer/TrainingOptimization.gif" alt="Agent behavior mid/late training, after the replay buffer optimization" style="width: 100%; height: auto;" />
-<br/><em>Same setup after the fix — noticeably faster convergence per wall-clock hour.</em>
-</td>
-</tr>
-</table>
+<em>Early training — before the bulk-insert replay buffer fix, wobbly and slow to converge.</em>
+</div>
+<div>
+<img src="/projects/rl_trainer/TrainingOptimization.gif" alt="Agent behavior mid/late training, after the replay buffer optimization" style="width: 100%; height: auto; display: block;" />
+<em>Same setup after the fix — noticeably faster convergence per wall-clock hour.</em>
+</div>
+</div>
 
 ## Contributions
 
@@ -92,17 +90,15 @@ The clearest lesson from this project was that iteration speed matters more than
 
 A working C++/LibTorch DQN pipeline with a custom, editable racing environment, a profiled and optimized training loop, and an agent that generalizes across track layouts rather than memorizing one. Documented in a public technical blog post covering the tool's design and the algorithm trade-offs evaluated along the way.
 
-<table>
-<tr>
-<td>
-<img src="/projects/rl_trainer/TrainedModel.gif" alt="Trained agent completing custom track 1" style="width: 100%; height: auto;" />
-<br/><em>Trained checkpoint (~3,200 episodes) completing the track it was trained on.</em>
-</td>
-<td>
-<img src="/projects/rl_trainer/TrainedModel2.gif" alt="Trained agent completing a different custom track" style="width: 100%; height: auto;" />
-<br/><em>The same checkpoint on a track it never trained on — generalization, not memorization.</em>
-</td>
-</tr>
-</table>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; align-items: start;">
+<div>
+<img src="/projects/rl_trainer/TrainedModel.gif" alt="Trained agent completing custom track 1" style="width: 100%; height: auto; display: block;" />
+<em>Trained checkpoint (~3,200 episodes) completing the track it was trained on.</em>
+</div>
+<div>
+<img src="/projects/rl_trainer/TrainedModel2.gif" alt="Trained agent completing a different custom track" style="width: 100%; height: auto; display: block;" />
+<em>The same checkpoint on a track it never trained on — generalization, not memorization.</em>
+</div>
+</div>
 
 <a href="https://ligaan.github.io/2024/01/22/Reinforcement-Learning-in-C++.html" target="_blank" rel="noopener noreferrer">Read the technical blog post for this project →</a>
