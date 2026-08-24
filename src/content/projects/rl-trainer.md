@@ -44,7 +44,6 @@ RL Racing Agent Trainer is a solo research and tooling project built to explore 
 
 **DQN implementation**
 - Implemented **DQN in C++ using LibTorch**, including the Q-network, epsilon-greedy action selection with exponential decay, and a replay buffer
-- Solved the **PyTorch/LibTorch integration problem** for a ~5GB dependency in a small C++ project by evaluating submodule inclusion, external install steps, and a trimmed local include/lib setup, ultimately settling on a lightweight vendored setup that kept clone/build costs manageable
 - Exposed a small, reusable API (`DQN`, `act()`, `step()`, environment `reset()`/`step()`) so the same training loop could run against any environment implementing the expected interface, and validated this on Gym's LunarLander before pointing the same DQN implementation at the custom Racing Track
 
 <video controls style="width: 100%; height: auto;">
@@ -106,4 +105,4 @@ A working C++/LibTorch DQN pipeline with a custom, editable racing environment, 
 </tr>
 </table>
 
-[Read the technical blog post →](https://ligaan.github.io/2024/01/22/Reinforcement-Learning-in-C++.html)
+[Read the technical blog post for this project →](https://ligaan.github.io/2024/01/22/Reinforcement-Learning-in-C++.html)
