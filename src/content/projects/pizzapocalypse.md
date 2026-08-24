@@ -52,9 +52,9 @@ The Steam Input plugin is the clearest example of building something from nothin
 ## Result
 A studio-wide pipeline (Perforce + Jenkins + automated profiling) that lets the team ship builds without manual intervention, plus a rendering/optimization approach and toolset that made large, densely set-dressed levels runnable on the intended target hardware.
 
-[View on Steam →](https://store.steampowered.com/app/4021890/Pizzapocalypse_2/)
+<a href="https://store.steampowered.com/app/4021890/Pizzapocalypse_2/" target="_blank" rel="noopener noreferrer">View on Steam →</a>
 
-<video controls width="500">
+<video controls style="width: 100%; height: auto;">
   <source src="/projects/pizzapocalypse2/Pizzapocalypse2.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>

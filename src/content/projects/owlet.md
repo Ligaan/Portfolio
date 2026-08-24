@@ -36,9 +36,9 @@ On the gameplay side, most of my UI/readability work (the leaderboard, wave coun
 
 Owlet shipped on itch.io as an early-access release with full Steam Deck compatibility (due to being a school project the steam app id was probably reused for another project), a gameplay trailer, and multiple post-launch updates based on feedback from both RTS veterans and newcomers.
 
-[View on itch.io →](https://buas.itch.io/owlet)
+<a href="https://buas.itch.io/owlet" target="_blank" rel="noopener noreferrer">View on itch.io →</a>
 
-<video controls width="500">
+<video controls style="width: 100%; height: auto;">
   <source src="/projects/owlet/owlet.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
