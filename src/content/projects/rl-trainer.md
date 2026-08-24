@@ -105,4 +105,4 @@ A working C++/LibTorch DQN pipeline with a custom, editable racing environment, 
 </tr>
 </table>
 
-[Read the technical blog post for this project →](https://ligaan.github.io/2024/01/22/Reinforcement-Learning-in-C++.html)
+<a href="https://ligaan.github.io/2024/01/22/Reinforcement-Learning-in-C++.html" target="_blank" rel="noopener noreferrer">Read the technical blog post for this project →</a>
