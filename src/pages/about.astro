@@ -2,13 +2,28 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="About">
-  <h1>About Me</h1>
-  <p>
-    I'm Andrei — a gameplay and engine programmer with four years of game
-    development training, ranging from writing a custom C++ engine to from
-    scratch or customizing engine templates (simplified bare bone engine with only resource management and rendering) to building gameplay systems and tools in Unreal Engine 5, to the CI/CD
-    and profiling tooling that keeps a studio shipping.
-  </p>
+  <div class="about-header">
+    <img
+      src="Photo.jpeg"
+      alt="Portrait of Andrei Cuprinsu"
+      class="profile-photo"
+      width="384"
+      height="512"
+    />
+    <div class="about-intro">
+      <h1>About Me</h1>
+      <p>
+        I'm Andrei — a gameplay and engine programmer with four years of game
+        development training in the <a href="https://www.buas.nl/en/programmes/creative-media-and-game-technologies" target="_blank" rel="noopener noreferrer">Creative Media and Game Technology</a> profile at
+        <a href="https://www.buas.nl/en" target="_blank" rel="noopener noreferrer">Breda University of Applied Sciences</a>, ranging from writing a custom C++
+        engine from scratch or customizing engine templates (simplified bare-bones
+        engines with only resource management and rendering), to building gameplay
+        systems and tools in Unreal Engine 5, to the CI/CD and profiling tooling
+        that keeps a studio shipping.
+      </p>
+    </div>
+  </div>
+
   <p>
     I have a personal interest in optimization and CI/CD tooling, but I also
     enjoy building gameplay systems end-to-end — from mechanics prototyping
@@ -17,6 +32,15 @@ import Layout from '../layouts/Layout.astro';
   <p>
     For my hobies I like to read books and novels, play video games either single player or multiplayer with my friends (Incremental/Survival/Idle/Strategy), learn some new things like a different API or some handy work like soldering circuits (haven't done that in a long while though) or making random bots for discord or other platforms and in general small scope projects 
   </p>
+
+  <h2>Academic History</h2>
+  <ul>
+    <li>
+      <strong>Creative Media and Game Technology (Programming)</strong> —
+      <a href="https://www.buas.nl/en/programmes/creative-media-and-game-technologies" target="_blank" rel="noopener noreferrer">Breda University of Applied Sciences</a>,
+      2022–2026
+    </li>
+  </ul>
 
   <h2>Skills</h2>
   <ul>
@@ -37,3 +61,39 @@ import Layout from '../layouts/Layout.astro';
     <li><strong>Brief Exposure</strong> — OpenGL, Bullet Physics, Kotlin, JavaScript (brief, occasional use)</li>
   </ul>
 </Layout>
+
+<style>
+  .about-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .profile-photo {
+    width: 9rem;
+    height: 9rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 15%;
+  }
+
+  .about-intro h1 {
+    margin-top: 0;
+  }
+
+  /* Stack on narrow screens, photo above text */
+  @media (max-width: 640px) {
+    .about-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .profile-photo {
+      width: 7rem;
+      height: 7rem;
+    }
+  }
+</style>
