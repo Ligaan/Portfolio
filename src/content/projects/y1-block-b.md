@@ -1,5 +1,5 @@
 ---
-title: "Year 1, Block B — Raspberry Pi 3D RTS"
+title: "Year 1 buas, Block B — Raspberry Pi 3D RTS"
 category: "Foundations"
 summary: "A 3D RTS in C++/OpenGL ES for Raspberry Pi 4, with Bullet physics, custom shaders, and procedural terrain."
 thumbnail: "/projects/year1_blockB/image.png"
