@@ -2,10 +2,31 @@
 title: "Year 1 buas, Block C — 2D Ray Tracer"
 category: "Foundations"
 summary: "A from-scratch 2D ray tracer — occluders, shadows, and an acceleration grid — built into a small light-avoidance game."
-thumbnail: "/projects/year1_blockC/image.png"
+thumbnail: "/projects/year1_blockC/BackgroundImageTest.png"
 team: "Solo"
 featured: false
 order: 11
+media:
+  - type: image
+    src: "/projects/year1_blockC/RotatingRayAndScreenRotation.gif"
+    alt: "Ray tracing with world-space rotation"
+    caption: "Core rendering — ray tracing against occluders while rotating the world independently of the screen buffer."
+  - type: image
+    src: "/projects/year1_blockC/MovingBoxOccluder.gif"
+    alt: "Shadow casting from a moving box occluder"
+    caption: "Shadow casting via line-ray intersection, tested against a moving box occluder."
+  - type: image
+    src: "/projects/year1_blockC/BackgroundImageTest.gif"
+    alt: "Scrolling background texture test"
+    caption: "The scrolling background texture, adapted from the course template's sprite class."
+  - type: image
+    src: "/projects/year1_blockC/GameLoop.gif"
+    alt: "Core gameplay loop"
+    caption: "The finished light-avoidance gameplay loop — avoiding occluders and other light sources before the timer runs out."
+  - type: image
+    src: "/projects/year1_blockC/GameMainMenuAndYouLose.gif"
+    alt: "Main menu and lose screen"
+    caption: "The finished game's screens — main menu through to the lose state."
 ---
 
 A from-scratch 2D ray tracer built over an 8-week block (based on the template from block A), rendering directly to a custom float-based pixel buffer, then extended into a small playable game built around light and shadow.
