@@ -6,14 +6,39 @@ thumbnail: "/projects/CSG/CSG/CSG.png"
 team: "Solo"
 featured: false
 order: 7
+media:
+  - type: video
+    src: "/projects/CSG/CSG/BoxBoxIntersection.mp4"
+    caption: "CSG box-box intersection, computed via face-to-face intersection and triangulation."
+  - type: image
+    src: "/projects/CSG/CSG/SphereBoxIntersection.png"
+    alt: "CSG sphere-box intersection result showing vertex defects"
+    caption: "End result of the sphere-box case — close, but some vertices still came out wrong and I didn't manage to fully fix them in time."
+  - type: image
+    src: "/projects/CSG/SDF/UnionCubeCube.png"
+    alt: "SDF box-box union result"
+    caption: "SDF box-box union."
+  - type: image
+    src: "/projects/CSG/SDF/DifferenceCubeCube.png"
+    alt: "SDF box-box difference result"
+    caption: "SDF box-box difference."
+  - type: image
+    src: "/projects/CSG/SDF/IntersectionCubeSphere.png"
+    alt: "SDF box-sphere intersection result"
+    caption: "SDF box-sphere intersection — same grid-resolution limitation on a curved surface."
+  - type: image
+    src: "/projects/CSG/SDF/IntersectionCylinderCube.png"
+    alt: "SDF cylinder-box intersection result"
+    caption: "SDF cylinder-box intersection."
+  - type: image
+    src: "/projects/CSG/SDF/SDFSphereCubeIntersectionComplex.png"
+    alt: "SDF sphere-box intersection comparison"
+    caption: "SDF sphere-box intersection comparison."
 ---
 
 A self-development project built alongside team production work: exploring runtime boolean mesh operations (union, subtraction, intersection) in C++ with OpenGL, GLFW, GLM, and ImGui — trying out both Constructive Solid Geometry (CSG) and Signed Distance Fields (SDF) as different approaches to the same problem, rather than committing to one from the start. Tracked separately on GitHub, distinct from the Dreadtome team project and run in parallel.
 
 **Repos:** [CSG implementation](https://github.com/Ligaan/CSGBooleanGeometry) · [SDF implementation](https://github.com/Ligaan/SDFBooleanGeometry)
-
-<div class="content-with-video">
-  <div class="content-text">
 
 ## What I did
 
@@ -40,58 +65,4 @@ CSG builds the result by directly intersecting mesh faces and triangulating the 
 
 ### SDF results
 
-SDF represents each shape as a distance field and evaluates the boolean operation on a grid instead of intersecting geometry directly. That sidesteps CSG's triangulation problem entirely, at the cost of resolution — every result on the right shows the same underlying blockiness.
-
-  </div>
-  <div class="video-column">
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <video controls playsinline preload="metadata">
-          <source src="/projects/CSG/CSG/BoxBoxIntersection.mp4" type="video/mp4" />
-          Your browser does not support embedded video.
-        </video>
-      </div>
-      <figcaption>
-        CSG box-box intersection, computed via face-to-face intersection and triangulation.
-      </figcaption>
-    </figure>
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <img src="/projects/CSG/CSG/SphereBoxIntersection.png" alt="CSG sphere-box intersection result showing vertex defects" />
-      </div>
-      <figcaption>
-        End result of the sphere-box case — close, but some vertices still came out wrong and I didn't manage to fully fix them in time.
-      </figcaption>
-    </figure>
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <img src="/projects/CSG/SDF/UnionCubeCube.png" alt="SDF box-box union result" />
-      </div>
-      <figcaption>SDF box-box union.</figcaption>
-    </figure>
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <img src="/projects/CSG/SDF/DifferenceCubeCube.png" alt="SDF box-box difference result" />
-      </div>
-      <figcaption>SDF box-box difference.</figcaption>
-    </figure>
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <img src="/projects/CSG/SDF/IntersectionCubeSphere.png" alt="SDF box-sphere intersection result" />
-      </div>
-      <figcaption>SDF box-sphere intersection — same grid-resolution limitation on a curved surface.</figcaption>
-    </figure>
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <img src="/projects/CSG/SDF/IntersectionCylinderCube.png" alt="SDF cylinder-box intersection result" />
-      </div>
-      <figcaption>SDF cylinder-box intersection.</figcaption>
-    </figure>
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <img src="/projects/CSG/SDF/SDFSphereCubeIntersectionComplex.png" alt="SDF sphere-box intersection comparison" />
-      </div>
-      <figcaption>SDF sphere-box intersection comparison.</figcaption>
-    </figure>
-  </div>
-</div>
+SDF represents each shape as a distance field and evaluates the boolean operation on a grid instead of intersecting geometry directly. That sidesteps CSG's triangulation problem entirely, at the cost of resolution — every result shown for SDF has the same underlying blockiness.

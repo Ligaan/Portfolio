@@ -6,14 +6,37 @@ thumbnail: "/projects/y3_unreal_prototypes/y3Prototypes.png"
 team: "Solo (within a small team project)"
 featured: false
 order: 6
+media:
+  - type: video
+    src: "/projects/y3_unreal_prototypes/Uncover.mp4"
+    caption: "Uncover/scan mechanic — nearby interactable items in the current room get outlined on trigger."
+  - type: video
+    src: "/projects/y3_unreal_prototypes/GravityShifting.mp4"
+    caption: "Gravity-shifting movement — player orientation and physics re-align to a new surface on trigger."
+  - type: video
+    src: "/projects/y3_unreal_prototypes/GrapplingHook.mp4"
+    caption: "Physics-driven grappling hook with object-pulling, before the prototype was shelved."
+  - type: video
+    src: "/projects/y3_unreal_prototypes/WallMovement.mp4"
+    caption: "Wall-movement prototype for the turret enemy, using a 3D pathfinding plugin — later replaced by simpler spline movement."
+  - type: video
+    src: "/projects/y3_unreal_prototypes/SelectionWheel.mp4"
+    caption: "Radial item-selection wheel — hover-to-select and click-to-trigger, later reused in the ability system's targeting UI."
+  - type: video
+    src: "/projects/y3_unreal_prototypes/AbilitySystem.mp4"
+    caption: "GAS-based modular ability system — four demo abilities showing the interface-driven targeting and effect flow."
+  - type: video
+    src: "/projects/y3_unreal_prototypes/ServerSideMultiplayer.mp4"
+    caption: "Two-client platformer demo (host side) built with EIK to validate session hosting and world-object replication."
+  - type: video
+    src: "/projects/y3_unreal_prototypes/ClientSideMultiplayer.mp4"
+    caption: "Same demo from the client side, showing joining and replicated dynamic-object state."
 ---
-
-<div class="content-with-video">
-  <div class="content-text">
 
 During the ~2-month exploratory/prototyping phase of Dreadtome, a team project, I built out a series of fast, standalone gameplay prototypes in Unreal Engine 5 to test which mechanics were worth pursuing. While Dreadtome was a team project, this exploratory work was done entirely solo — each prototype was built, tested, and shared back with the team for feedback before any decision was made on what to carry into production.
 
 **Repo:** [prototypes for 5.4](https://github.com/Ligaan/Prototyping)
+
 ## What I did
 
 - An **uncover/scan mechanic**, revealing nearby interactable items in the player's current room with an outline shader — later reused as the base for the ability system's targeting outline
@@ -32,96 +55,3 @@ The multiplayer research followed the same "fail fast, don't force a bad fit" ap
 
 ## Result
 A working set of standalone prototypes — most importantly the outline shader, selection wheel, and modular ability system — that fed directly into Dreadtome's production phase, plus a validated (if imperfect) peer-to-peer multiplayer replication pipeline for future use.
-
-  </div>
-  <div class="video-column">
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <video controls playsinline preload="metadata">
-          <source src="/projects/y3_unreal_prototypes/Uncover.mp4" type="video/mp4" />
-          Your browser does not support embedded video.
-        </video>
-      </div>
-      <figcaption>
-        Uncover/scan mechanic — nearby interactable items in the current room get outlined on trigger.
-      </figcaption>
-    </figure>
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <video controls playsinline preload="metadata">
-          <source src="/projects/y3_unreal_prototypes/GravityShifting.mp4" type="video/mp4" />
-          Your browser does not support embedded video.
-        </video>
-      </div>
-      <figcaption>
-        Gravity-shifting movement — player orientation and physics re-align to a new surface on trigger.
-      </figcaption>
-    </figure>
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <video controls playsinline preload="metadata">
-          <source src="/projects/y3_unreal_prototypes/GrapplingHook.mp4" type="video/mp4" />
-          Your browser does not support embedded video.
-        </video>
-      </div>
-      <figcaption>
-        Physics-driven grappling hook with object-pulling, before the prototype was shelved.
-      </figcaption>
-    </figure>
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <video controls playsinline preload="metadata">
-          <source src="/projects/y3_unreal_prototypes/WallMovement.mp4" type="video/mp4" />
-          Your browser does not support embedded video.
-        </video>
-      </div>
-      <figcaption>
-        Wall-movement prototype for the turret enemy, using a 3D pathfinding plugin — later replaced by simpler spline movement.
-      </figcaption>
-    </figure>
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <video controls playsinline preload="metadata">
-          <source src="/projects/y3_unreal_prototypes/SelectionWheel.mp4" type="video/mp4" />
-          Your browser does not support embedded video.
-        </video>
-      </div>
-      <figcaption>
-        Radial item-selection wheel — hover-to-select and click-to-trigger, later reused in the ability system's targeting UI.
-      </figcaption>
-    </figure>
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <video controls playsinline preload="metadata">
-          <source src="/projects/y3_unreal_prototypes/AbilitySystem.mp4" type="video/mp4" />
-          Your browser does not support embedded video.
-        </video>
-      </div>
-      <figcaption>
-        GAS-based modular ability system — four demo abilities showing the interface-driven targeting and effect flow.
-      </figcaption>
-    </figure>
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <video controls playsinline preload="metadata">
-          <source src="/projects/y3_unreal_prototypes/ServerSideMultiplayer.mp4" type="video/mp4" />
-          Your browser does not support embedded video.
-        </video>
-      </div>
-      <figcaption>
-        Two-client platformer demo (host side) built with EIK to validate session hosting and world-object replication.
-      </figcaption>
-    </figure>
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <video controls playsinline preload="metadata">
-          <source src="/projects/y3_unreal_prototypes/ClientSideMultiplayer.mp4" type="video/mp4" />
-          Your browser does not support embedded video.
-        </video>
-      </div>
-      <figcaption>
-        Same demo from the client side, showing joining and replicated dynamic-object state.
-      </figcaption>
-    </figure>
-  </div>
-</div>

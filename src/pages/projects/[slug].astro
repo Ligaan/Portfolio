@@ -12,6 +12,7 @@ export async function getStaticPaths() {
 
 const { project } = Astro.props;
 const { Content } = await render(project);
+const media = project.data.media ?? [];
 ---
 <Layout title={project.data.title}>
   <p><a href="/projects">← Back to Projects</a></p>
@@ -26,9 +27,33 @@ const { Content } = await render(project);
     {project.data.links?.video && <a href={project.data.links.video} target="_blank">Video</a>}
   </div>
 
-  <article>
-    <Content />
-  </article>
+  <div class="content-with-video">
+    <div class="content-text">
+      <article>
+        <Content />
+      </article>
+    </div>
+
+    {media.length > 0 && (
+      <div class="video-column">
+        {media.map((item) => (
+          <figure class="video-figure">
+            <div class="video-wrapper">
+              {item.type === 'video' ? (
+                <video controls playsinline preload="metadata">
+                  <source src={item.src} type="video/mp4" />
+                  Your browser does not support embedded video.
+                </video>
+              ) : (
+                <img src={item.src} alt={item.alt ?? project.data.title} />
+              )}
+            </div>
+            {item.caption && <figcaption>{item.caption}</figcaption>}
+          </figure>
+        ))}
+      </div>
+    )}
+  </div>
 </Layout>
 
 <style>

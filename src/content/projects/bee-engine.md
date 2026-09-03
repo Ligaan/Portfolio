@@ -8,12 +8,16 @@ featured: false
 order: 5
 links:
   github: ""
+media:
+  - type: video
+    src: "/projects/bee_engine/ParticleSystem.mp4"
+    caption: "The particle system driven entirely through ImGui — creating/destroying emitters and editing emission rate, lifespan, color transitions, and mesh/texture, while sustaining 40k+ particles as EnTT entities."
+  - type: video
+    src: "/projects/bee_engine/luaScripting.mp4"
+    caption: "The Lua scripting manager in action — a camera implemented entirely through a loaded Lua script, demonstrating per-frame and cooldown-based function calls exposed at runtime."
 ---
 
 Work on BEE, a custom C++ engine I built from scratch based on a school template as a solo project.
-
-<div class="content-with-video">
-  <div class="content-text">
 
 ## What I did
 
@@ -33,30 +37,3 @@ Other C++ practices applied throughout the engine: const references for read-onl
 
 ## Result
 Multiple engine subsystems that later carried over into other projects (see Owlet), plus hands-on experience with the practical side of cross-platform support — SDK integration and debugging that only surfaces on real target hardware, not a desktop dev environment.
-
-  </div>
-  <div class="video-column">
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <video controls playsinline preload="metadata">
-          <source src="/projects/bee_engine/ParticleSystem.mp4" type="video/mp4" />
-          Your browser does not support embedded video.
-        </video>
-      </div>
-      <figcaption>
-        The particle system driven entirely through ImGui — creating/destroying emitters and editing emission rate, lifespan, color transitions, and mesh/texture, while sustaining 40k+ particles as EnTT entities.
-      </figcaption>
-    </figure>
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <video controls playsinline preload="metadata">
-          <source src="/projects/bee_engine/luaScripting.mp4" type="video/mp4" />
-          Your browser does not support embedded video.
-        </video>
-      </div>
-      <figcaption>
-        The Lua scripting manager in action — a camera implemented entirely through a loaded Lua script, demonstrating per-frame and cooldown-based function calls exposed at runtime.
-      </figcaption>
-    </figure>
-  </div>
-</div>

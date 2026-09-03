@@ -8,6 +8,19 @@ featured: false
 order: 12
 links:
     itch: ""
+media:
+  - type: image
+    src: "/projects/shellshock/rotation.gif"
+    alt: "Ball movement and rotation"
+    caption: "Ball movement and rotation, after the switch to quaternion-based orientation."
+  - type: image
+    src: "/projects/shellshock/ids.gif"
+    alt: "Team ID assignment"
+    caption: "Team ID assignment, used to prevent friendly fire in the hit-detection check."
+  - type: image
+    src: "/projects/shellshock/Collab.gif"
+    alt: "Layout save/load"
+    caption: "Layout save/load via the JSON-based file I/O system."
 ---
 
 Shellshock is a physics-based coach game built with a small team ("Termite") in Unreal Engine 5.4, taking inspiration from *Videoball*'s bounce-and-control ball mechanic. This was both my first project in Unreal and my first team-based game project — I came in having never touched the engine before and never having worked on a game as part of a team, so a good chunk of the block was as much about learning Unreal itself (Blueprints, the Enhanced Input System, C++ inside Unreal specifically) and how to work within a multi-discipline team (Design, Art, Programming) as it was about shipping the game.
@@ -20,21 +33,15 @@ Shellshock is a physics-based coach game built with a small team ("Termite") in 
 - Diagnosed and fixed a **gimbal lock bug** in that rotation (a visible 180° snap at certain angles) by switching the approach to **quaternions**, which also cleaned up the rotation generally
 - Learned along the way that Unreal exposes most of its quaternion functionality to C++ scripts only, not Blueprints — and that Perforce submits from inside the editor don't always include every file (like the `.sln`) a new C++ class needs to be visible to the engine
 
-<img src="/projects/shellshock/rotation.gif" alt="Ball movement and rotation" style="width: 100%; height: auto; display: block;" />
-
 **Gameplay mechanics**
 - Built the **hit-detection function** for the crab's stunning mechanic (paired with a teammate who built the stun effect itself), including team IDs so the check couldn't register friendly fire
 - Fixed a **team-selection bug** where any player standing in the team-select circle would claim it, and leaving didn't hand control back to another player still standing there — iterated on the fix twice based on teammate feedback until it correctly passed ownership to a remaining player
 - Contributed design input on the shell defense mechanic and the ball/power-up ideas during sprint planning
 
-<img src="/projects/shellshock/ids.gif" alt="Team ID assignment" style="width: 100%; height: auto; display: block;" />
-
 **First C++ in Unreal**
 - Wrote a **file read/write system** to save and load object layouts to disk — the first C++ (rather than Blueprint) work of the project, needed because Blueprints had no built-in file I/O
 - Rebuilt that system a week later using **JSON serialization** (struct ↔ JSON conversion) after the first text-parsing version proved too brittle to extend
 - Fixed roughly a third of the team's total logged bugs over the block, working across the ball, team-selection, and shell systems
-
-<img src="/projects/shellshock/Collab.gif" alt="Layout save/load" style="width: 100%; height: auto; display: block;" />
 
 ## Contributions
 

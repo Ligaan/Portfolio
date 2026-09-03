@@ -9,6 +9,14 @@ order: 1
 links:
   itch: ""
   video: ""
+media:
+  - type: image
+    src: "/projects/owlet/Steam_Deck.gif"
+    alt: "Steam Deck support running in an earlier build of the game"
+    caption: "Steam deck support from an earlier stage of the engine development."
+  - type: video
+    src: "/projects/owlet/owlet.mp4"
+    caption: "Gameplay trailer."
 ---
 
 Owlet is an RTS/tower-defense game built by a team of 14, running on a fully custom C++ engine written from scratch by the team based on a bare bone engine template that covered basic resource management and rendering (the rendering was redone for DX12 by one of our programmers). My role covered gameplay/UI systems within the engine, and I was the sole person responsible for Steam integration and Steam Deck support along with small help regarding data structures for entities and some serialization for the towers class.
@@ -26,10 +34,6 @@ Owlet is an RTS/tower-defense game built by a team of 14, running on a fully cus
 - Built an **input wrapper** unifying the engine's native input and Steam Input under the same function calls, removing platform-specific branching from gameplay code
 - Set up **platform-dependent build configuration** separation for cross-platform support
 
-
-<img src="/projects/owlet/Steam_Deck.gif" alt="Agent behavior mid/late training, after the replay buffer optimization" style="width: 100%; height: auto; display: block;" />
-Steam deck support from an earlier stage of the engine development
-
 ## Contributions
 
 Integrating Steam into a fully custom engine meant there was no existing plugin layer to lean on the way there would be in Unreal or Unity — every piece of SDK setup, initialization, and platform-specific behavior had to be handled directly. Getting the game verified and running correctly on Steam Deck specifically added its own layer of debugging on top of that: control input handling and general behavior that simply doesn't surface on a normal desktop dev environment, so a lot of it only became visible once actually testing on Deck hardware.
@@ -41,8 +45,3 @@ On the gameplay side, most of my UI/readability work (the leaderboard, wave coun
 Owlet shipped on itch.io as an early-access release with full Steam Deck compatibility (due to being a school project the steam app id was probably reused for another project), a gameplay trailer, and multiple post-launch updates based on feedback from both RTS veterans and newcomers.
 
 <a href="https://buas.itch.io/owlet" target="_blank" rel="noopener noreferrer">View on itch.io →</a>
-
-<video controls style="width: 100%; height: auto;">
-  <source src="/projects/owlet/owlet.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>

@@ -6,12 +6,23 @@ thumbnail: "/projects/year1_blockA/image.png"
 team: "Solo"
 featured: false
 order: 9
+media:
+  - type: image
+    src: "/projects/year1_blockA/AStar.gif"
+    alt: "A* pathfinding for units"
+    caption: "A* pathfinding — units routing around static obstacles across the map."
+  - type: image
+    src: "/projects/year1_blockA/AStartSteringFinalResult.gif"
+    alt: "Final combined A* and steering result"
+    caption: "The finished movement system — A* pathfinding combined with local steering, units no longer blocking or cutting through each other."
+  - type: image
+    src: "/projects/year1_blockA/Shooting.gif"
+    alt: "Final gameplay showing shooting and full unit behavior"
+    caption: "The game in its final state — units selecting, moving, and shooting together."
 ---
 
-<div class="content-with-video">
-  <div class="content-text">
-
 First project done at buas, built over roughly 2 months, using a school-provided template that covered only rendering — physics (collision, movement resolution) was implemented from scrath based on AABB detection and steering along with the rest of the common mechanics for an RTS.
+
 ## What I did
 
 - Built a **tile-based, scrollable map** (3x the physical screen size) using a custom tile map/sprite class, with **zoom in/out** — including a custom equation for zooming centered on the mouse cursor position, rather than a fixed screen point
@@ -30,32 +41,3 @@ Since the provided template only handled rendering, all of the physics — colli
 
 ## Result
 A functional 2D RTS prototype with a custom tile map, mouse-centered zoom, group-based unit control, and a working combination of A* and local steering for movement — patterns that carried forward into later, larger projects. Pixel-perfect collision remained an unresolved stretch goal, documented as a known limitation rather than shipped broken.
-
-  </div>
-  <div class="video-column">
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <img src="/projects/year1_blockA/AStar.gif" alt="A* pathfinding for units" />
-      </div>
-      <figcaption>
-        A* pathfinding — units routing around static obstacles across the map.
-      </figcaption>
-    </figure>
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <img src="/projects/year1_blockA/AStartSteringFinalResult.gif" alt="Final combined A* and steering result" />
-      </div>
-      <figcaption>
-        The finished movement system — A* pathfinding combined with local steering, units no longer blocking or cutting through each other.
-      </figcaption>
-    </figure>
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <img src="/projects/year1_blockA/Shooting.gif" alt="Final gameplay showing shooting and full unit behavior" />
-      </div>
-      <figcaption>
-        The game in its final state — units selecting, moving, and shooting together.
-      </figcaption>
-    </figure>
-  </div>
-</div>

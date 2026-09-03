@@ -8,6 +8,10 @@ featured: true
 order: 2
 links:
   video: ""
+media:
+  - type: video
+    src: "/projects/pizzapocalypse2/Pizzapocalypse2.mp4"
+    caption: "Gameplay trailer."
 ---
 
 Pizzapocalypse 2 is a UE5.6 production at Monkey Strike Games, where I work as Technical Lead. My work spans the full pipeline: the studio's infrastructure (Perforce, Jenkins, VPN) along with setting their office servers, rendering optimization and baked lighting for open, densely set-dressed levels, Steam platform integration built largely from scratch due to custom logic being needed for enhanced input system and drm and packaging/build/compile bugs and errors fixing.
@@ -53,8 +57,3 @@ The Steam Input plugin is the clearest example of building something from nothin
 A studio-wide pipeline (Perforce + Jenkins + automated profiling) that lets the team ship builds without manual intervention, plus a rendering/optimization approach and toolset that made large, densely set-dressed levels runnable on the intended target hardware.
 
 <a href="https://store.steampowered.com/app/4021890/Pizzapocalypse_2/" target="_blank" rel="noopener noreferrer">View on Steam →</a>
-
-<video controls style="width: 100%; height: auto;">
-  <source src="/projects/pizzapocalypse2/Pizzapocalypse2.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>

@@ -6,10 +6,20 @@ thumbnail: "/projects/year1_blockB/image.png"
 team: "Solo"
 featured: false
 order: 10
+media:
+  - type: image
+    src: "/projects/year1_blockB/SelectionEntityIdentityShadersShadows.gif"
+    alt: "Unit selection, stencil-buffer outlining, and shaded/shadowed rendering"
+    caption: "Unit selection with stencil-buffer outlining, alongside the shaded, shadowed rendering of the tanks and terrain."
+  - type: image
+    src: "/projects/year1_blockB/EnemyAIProceduralTerrainPhysics.gif"
+    alt: "Enemy AI on procedurally generated terrain with Bullet physics"
+    caption: "Enemy tank AI moving across the procedurally generated terrain, driven by Bullet physics."
+  - type: image
+    src: "/projects/year1_blockB/OwnUnitsTargetingAI.gif"
+    alt: "Player units targeting and engaging the enemy AI"
+    caption: "Player-controlled units targeting and engaging enemy tanks."
 ---
-
-<div class="content-with-video">
-  <div class="content-text">
 
 A 3D RTS built from scratch in C++ over a 9-week block with a starting template for the libraries needed and alternative libraries for different builds for PC and raspberry pi 4. Target was Raspberry Pi 4 with OpenGL ES 3.0, using Bullet for physics and custom shaders — the direct follow-up to the framework and rendering groundwork laid in block A with added complexity given by 3D environment and physics along with custom shaders.
 
@@ -30,32 +40,3 @@ Two things stood out as harder than expected: the enemy tank AI, driven through 
 
 ## Result
 A playable, finished 3-level tank RTS running natively on Raspberry Pi 4 hardware: real embedded-platform deployment experience layered on top of procedural terrain, physics-driven AI, and instanced rendering, with the instancing/stencil-buffer conflict documented as a known, unresolved limitation rather than a silently shipped bug.
-
-  </div>
-  <div class="video-column">
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <img src="/projects/year1_blockB/SelectionEntityIdentityShadersShadows.gif" alt="Unit selection, stencil-buffer outlining, and shaded/shadowed rendering" />
-      </div>
-      <figcaption>
-        Unit selection with stencil-buffer outlining, alongside the shaded, shadowed rendering of the tanks and terrain.
-      </figcaption>
-    </figure>
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <img src="/projects/year1_blockB/EnemyAIProceduralTerrainPhysics.gif" alt="Enemy AI on procedurally generated terrain with Bullet physics" />
-      </div>
-      <figcaption>
-        Enemy tank AI moving across the procedurally generated terrain, driven by Bullet physics.
-      </figcaption>
-    </figure>
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <img src="/projects/year1_blockB/OwnUnitsTargetingAI.gif" alt="Player units targeting and engaging the enemy AI" />
-      </div>
-      <figcaption>
-        Player-controlled units targeting and engaging enemy tanks.
-      </figcaption>
-    </figure>
-  </div>
-</div>

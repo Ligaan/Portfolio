@@ -8,12 +8,19 @@ featured: false
 order: 13
 links:
   github: "https://github.com/Ligaan/ShootingRL"
+media:
+  - type: video
+    src: "/projects/shootingrl/LevelCreation.mp4"
+    caption: "Setting up the project and building the level editor, with serialization/deserialization of the level."
+  - type: video
+    src: "/projects/shootingrl/PlayerRun.mp4"
+    caption: "The environment's gameplay and rules from the player's perspective."
+  - type: video
+    src: "/projects/shootingrl/AITraining.mp4"
+    caption: "The AI training loop — the learning phase, driven by batches of 64 states (each two 800×800 frames), is the main bottleneck."
 ---
 
 A self-development project exploring image-based reinforcement learning: training a DQN agent using the raw screen pixel buffer as input, rather than hand-crafted state values (the approach used in the earlier RL Racing Agent Trainer). Built over roughly 2 months at around 4–8 hours a week, alongside team production work (Dreadtome).
-
-<div class="content-with-video">
-  <div class="content-text">
 
 ## What I did
 
@@ -29,41 +36,3 @@ The core challenge here wasn't the RL algorithm itself (DQN was already proven f
 
 ## Result
 A working environment and training pipeline with a functional but under-trained agent — the project's value ended up being a clear, profiled understanding of where image-based RL training costs actually come from, rather than a fully converged agent.
-
-  </div>
-  <div class="video-column">
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <video controls playsinline preload="metadata">
-          <source src="/projects/shootingrl/LevelCreation.mp4" type="video/mp4" />
-          Your browser does not support embedded video.
-        </video>
-      </div>
-      <figcaption>
-        Setting up the project and building the level editor, with serialization/deserialization of the level.
-      </figcaption>
-    </figure>
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <video controls playsinline preload="metadata">
-          <source src="/projects/shootingrl/PlayerRun.mp4" type="video/mp4" />
-          Your browser does not support embedded video.
-        </video>
-      </div>
-      <figcaption>
-        The environment's gameplay and rules from the player's perspective.
-      </figcaption>
-    </figure>
-    <figure class="video-figure">
-      <div class="video-wrapper">
-        <video controls playsinline preload="metadata">
-          <source src="/projects/shootingrl/AITraining.mp4" type="video/mp4" />
-          Your browser does not support embedded video.
-        </video>
-      </div>
-      <figcaption>
-        The AI training loop — the learning phase, driven by batches of 64 states (each two 800×800 frames), is the main bottleneck.
-      </figcaption>
-    </figure>
-  </div>
-</div>

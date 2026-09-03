@@ -16,6 +16,12 @@ const projects = defineCollection({
       itch: z.string().optional(),
       video: z.string().optional(),
     }).optional(),
+    media: z.array(z.object({
+      type: z.enum(['image', 'video']),
+      src: z.string(),
+      alt: z.string().optional(),
+      caption: z.string().optional(),
+    })).optional(),
   }),
 });
 
